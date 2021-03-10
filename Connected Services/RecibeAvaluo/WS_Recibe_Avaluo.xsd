@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TesoreriaDF_WS" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TesoreriaDF_WS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="DatosRegistroAvaluo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AvaluoXML" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Folio_Interno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Folio_Usuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DatosRegistroAvaluo" nillable="true" type="tns:DatosRegistroAvaluo" />
+  <xs:complexType name="DatosAdicionalesAvaluo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Fecha_Pago" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Folio_Interno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Folio_Usuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_Captura" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Monto_Pago" type="xs:double" />
+      <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DatosAdicionalesAvaluo" nillable="true" type="tns:DatosAdicionalesAvaluo" />
+  <xs:complexType name="Respuesta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aceptado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Respuesta" nillable="true" type="tns:Respuesta" />
+</xs:schema>

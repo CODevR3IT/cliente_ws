@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://serviciosqa.solucionideas.com/WS_Recibe_Avaluo.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TesoreriaDF_WS" />
+  <xs:element name="BandejaAvaluoXML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TesoreriaDF_WS" minOccurs="0" name="datos" nillable="true" type="q1:DatosRegistroAvaluo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BandejaAvaluoXMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BandejaAvaluoXMLResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarEnAvaluoXML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/TesoreriaDF_WS" minOccurs="0" name="datos" nillable="true" type="q2:DatosAdicionalesAvaluo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarEnAvaluoXMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/TesoreriaDF_WS" minOccurs="0" name="ActualizarEnAvaluoXMLResult" nillable="true" type="q3:Respuesta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenertoken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="folio_avaluo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenertokenResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
